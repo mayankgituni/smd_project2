@@ -27,7 +27,14 @@ public class MyAutoController extends CarController{
 		public void update() {
 			// Gets what the car can see
 			HashMap<Coordinate, MapTile> currentView = getView();
-			
+
+			//System.out.println("HHH!"+ (currentView.values().iterator().next() instanceof tiles.ParcelTrap));
+
+			System.out.println(currentView.values().iterator().next().toString());
+//			if (currentView.values().iterator().next() instanceof tiles.ParcelTrap){
+//				System.out.println("HHH!"+ (currentView.values().iterator().next() instanceof tiles.ParcelTrap));
+//			}
+
 			// checkStateChange();
 			if(getSpeed() < CAR_MAX_SPEED){       // Need speed to turn and progress toward the exit
 				applyForwardAcceleration();   // Tough luck if there's a wall in the way
@@ -50,6 +57,8 @@ public class MyAutoController extends CarController{
 				}
 			}
 		}
+
+
 
 		/**
 		 * Check if you have a wall in front of you!

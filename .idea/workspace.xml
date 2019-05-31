@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e23c43a-c6b8-4ac7-97c6-257a1f5817aa" name="Default Changelist" comment="Default Changelist&#10;&#10;Test">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/Driving.Properties" afterPath="$PROJECT_DIR$/assets/Driving.Properties" />
-      <change beforePath="$PROJECT_DIR$/assets/log/output.log" afterPath="$PROJECT_DIR$/assets/log/output.log" />
-      <change beforePath="$PROJECT_DIR$/bin/Driving.Properties" afterPath="$PROJECT_DIR$/bin/Driving.Properties" />
-      <change beforePath="$PROJECT_DIR$/bin/controller/CarController.class" afterPath="$PROJECT_DIR$/bin/controller/CarController.class" />
-      <change beforePath="$PROJECT_DIR$/bin/controller/ManualController.class" afterPath="$PROJECT_DIR$/bin/controller/ManualController.class" />
-      <change beforePath="$PROJECT_DIR$/bin/controller/SimpleAutoController$1.class" afterPath="$PROJECT_DIR$/bin/controller/SimpleAutoController$1.class" />
-      <change beforePath="$PROJECT_DIR$/bin/controller/SimpleAutoController.class" afterPath="$PROJECT_DIR$/bin/controller/SimpleAutoController.class" />
-      <change beforePath="$PROJECT_DIR$/bin/exceptions/NoStartLocationException.class" afterPath="$PROJECT_DIR$/bin/exceptions/NoStartLocationException.class" />
-      <change beforePath="$PROJECT_DIR$/bin/exceptions/UnsupportedModeException.class" afterPath="$PROJECT_DIR$/bin/exceptions/UnsupportedModeException.class" />
-      <change beforePath="$PROJECT_DIR$/bin/log/output.log" afterPath="$PROJECT_DIR$/bin/log/output.log" />
-      <change beforePath="$PROJECT_DIR$/bin/mycontroller/MyAutoController$1.class" afterPath="$PROJECT_DIR$/bin/mycontroller/MyAutoController$1.class" />
-      <change beforePath="$PROJECT_DIR$/bin/mycontroller/MyAutoController.class" afterPath="$PROJECT_DIR$/bin/mycontroller/MyAutoController.class" />
-      <change beforePath="$PROJECT_DIR$/bin/swen30006/driving/Simulation$CameraMode.class" afterPath="$PROJECT_DIR$/bin/swen30006/driving/Simulation$CameraMode.class" />
-      <change beforePath="$PROJECT_DIR$/bin/swen30006/driving/Simulation$StrategyMode.class" afterPath="$PROJECT_DIR$/bin/swen30006/driving/Simulation$StrategyMode.class" />
-      <change beforePath="$PROJECT_DIR$/bin/swen30006/driving/Simulation.class" afterPath="$PROJECT_DIR$/bin/swen30006/driving/Simulation.class" />
-      <change beforePath="$PROJECT_DIR$/bin/swen30006/driving/desktop/DesktopLauncher.class" afterPath="$PROJECT_DIR$/bin/swen30006/driving/desktop/DesktopLauncher.class" />
-      <change beforePath="$PROJECT_DIR$/bin/swen30006/driving/headless/ServerLauncher.class" afterPath="$PROJECT_DIR$/bin/swen30006/driving/headless/ServerLauncher.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/GrassTrap.class" afterPath="$PROJECT_DIR$/bin/tiles/GrassTrap.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/HealthTrap.class" afterPath="$PROJECT_DIR$/bin/tiles/HealthTrap.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/LavaTrap.class" afterPath="$PROJECT_DIR$/bin/tiles/LavaTrap.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/MapTile$Type.class" afterPath="$PROJECT_DIR$/bin/tiles/MapTile$Type.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/MapTile.class" afterPath="$PROJECT_DIR$/bin/tiles/MapTile.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/MudTrap.class" afterPath="$PROJECT_DIR$/bin/tiles/MudTrap.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/ParcelTrap.class" afterPath="$PROJECT_DIR$/bin/tiles/ParcelTrap.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/TrapTile.class" afterPath="$PROJECT_DIR$/bin/tiles/TrapTile.class" />
-      <change beforePath="$PROJECT_DIR$/bin/tiles/WaterTrap.class" afterPath="$PROJECT_DIR$/bin/tiles/WaterTrap.class" />
-      <change beforePath="$PROJECT_DIR$/bin/utilities/Coordinate.class" afterPath="$PROJECT_DIR$/bin/utilities/Coordinate.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/Car$1.class" afterPath="$PROJECT_DIR$/bin/world/Car$1.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/Car$Acceleration.class" afterPath="$PROJECT_DIR$/bin/world/Car$Acceleration.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/Car.class" afterPath="$PROJECT_DIR$/bin/world/Car.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/World.class" afterPath="$PROJECT_DIR$/bin/world/World.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/WorldSpatial$1.class" afterPath="$PROJECT_DIR$/bin/world/WorldSpatial$1.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/WorldSpatial$Direction.class" afterPath="$PROJECT_DIR$/bin/world/WorldSpatial$Direction.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/WorldSpatial$RelativeDirection.class" afterPath="$PROJECT_DIR$/bin/world/WorldSpatial$RelativeDirection.class" />
-      <change beforePath="$PROJECT_DIR$/bin/world/WorldSpatial.class" afterPath="$PROJECT_DIR$/bin/world/WorldSpatial.class" />
-      <change beforePath="$PROJECT_DIR$/src/mycontroller/MyAutoController.java" afterPath="$PROJECT_DIR$/src/mycontroller/MyAutoController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -181,7 +143,7 @@
       <file leaf-file-name="MapTile.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tiles/MapTile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="165">
               <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="35" />
               <folding />
             </state>
@@ -233,9 +195,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
+    <option name="x" value="344" />
     <option name="y" value="23" />
-    <option name="width" value="1300" />
+    <option name="width" value="1007" />
     <option name="height" value="783" />
   </component>
   <component name="ProjectView">
@@ -453,8 +415,16 @@
       <workItem from="1559055487370" duration="14313000" />
       <workItem from="1559191012802" duration="432000" />
       <workItem from="1559279083624" duration="576000" />
-      <workItem from="1559299915138" duration="801000" />
+      <workItem from="1559299915138" duration="880000" />
     </task>
+    <task id="LOCAL-00001" summary="Default Changelist&#10;&#10;Test">
+      <created>1559306171896</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559306171896</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -472,11 +442,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25097000" />
+    <option name="totallyTimeSpent" value="25176000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="23" width="1300" height="783" extended-state="0" />
-    <editor active="true" />
+    <frame x="344" y="23" width="1007" height="783" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -487,17 +456,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33575583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2616279" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28139904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36683938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3997093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -947,7 +916,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tiles/MapTile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="165">
           <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="35" />
           <folding />
         </state>

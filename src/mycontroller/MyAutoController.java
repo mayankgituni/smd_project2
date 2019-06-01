@@ -1,12 +1,18 @@
 package mycontroller;
 
 import controller.CarController;
+import tiles.LavaTrap;
+import tiles.TrapTile;
 import world.Car;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.*;
 
 import tiles.MapTile;
 import utilities.Coordinate;
 import world.WorldSpatial;
+import world.WorldSpatial.Direction;
 
 public class MyAutoController extends CarController{		
 		// How many minimum units the wall is away from the player.
@@ -16,11 +22,18 @@ public class MyAutoController extends CarController{
 		
 		// Car Speed to move at
 		private final int CAR_MAX_SPEED = 1;
-		
+
 		public MyAutoController(Car car) {
 			super(car);
+			ParcelLocation = new ArrayList<Coordinate>();
+
 		}
-		
+
+
+		private final int FIRST_STEP = 0;
+
+		public ArrayList<Coordinate> ParcelLocation;
+
 		// Coordinate initialGuess;
 		// boolean notSouth = true;
 		@Override
@@ -28,135 +41,150 @@ public class MyAutoController extends CarController{
 			// Gets what the car can see
 			HashMap<Coordinate, MapTile> currentView = getView();
 
-			//System.out.println("HHH!"+ (currentView.values().iterator().next() instanceof tiles.ParcelTrap));
 
-			System.out.println(currentView.values().iterator().next().toString());
-//			if (currentView.values().iterator().next() instanceof tiles.ParcelTrap){
-//				System.out.println("HHH!"+ (currentView.values().iterator().next() instanceof tiles.ParcelTrap));
-//			}
+			//update ParcelLocation with currentView
+			findParcels(getView());
+			ExploreMap.getInstance().updateMap(getView());
 
-			// checkStateChange();
-			if(getSpeed() < CAR_MAX_SPEED){       // Need speed to turn and progress toward the exit
-				applyForwardAcceleration();   // Tough luck if there's a wall in the way
-			}
-			if (isFollowingWall) {
-				// If wall no longer on left, turn left
-				if(!checkFollowingWall(getOrientation(), currentView)) {
-					turnLeft();
-				} else {
-					// If wall on left and wall straight ahead, turn right
-					if(checkWallAhead(getOrientation(), currentView)) {
-						turnRight();
-					}
-				}
-			} else {
-				// Start wall-following (with wall on left) as soon as we see a wall straight ahead
-				if(checkWallAhead(getOrientation(),currentView)) {
-					turnRight();
-					isFollowingWall = true;
-				}
-			}
+			RoutingStrategy routingStrategy = new RoutingStrategy(new Coordinate(getPosition()), getOrientation());
+			//find the path using the chosen Strategy
+			ArrayList<Coordinate> path = routingStrategy.AstarPathFinding();
+
+
+			//drive 1 step
+			drive(new Coordinate(getPosition()), path.get(FIRST_STEP));
+
+
 		}
 
 
+	//drive from start coordinate to goal coordinate
+	private void drive(Coordinate start, Coordinate goal) {
+		int startX =  start.x;
+		int startY = start.y;
+		int goalX = goal.x;
+		int goalY = goal.y;
+		if (goalX == startX + 1) {
+			goEast();
+		}
+		else if (goalX == startX - 1) {
+			goWest();
+		}
+		else if(goalY == startY+ 1) {
+			goNorth();
+		}else if (goalY == startY- 1) {
+			goSouth();
+		}else {
+			applyBrake();
+		}
 
-		/**
-		 * Check if you have a wall in front of you!
-		 * @param orientation the orientation we are in based on WorldSpatial
-		 * @param currentView what the car can currently see
-		 * @return
-		 */
-		private boolean checkWallAhead(WorldSpatial.Direction orientation, HashMap<Coordinate, MapTile> currentView){
-			switch(orientation){
+	}
+
+
+	private void goSouth() {
+		Direction currentOrientation = getOrientation();
+		switch(currentOrientation){
 			case EAST:
-				return checkEast(currentView);
+				turnRight();
+				break;
 			case NORTH:
-				return checkNorth(currentView);
+				applyReverseAcceleration();
+				break;
 			case SOUTH:
-				return checkSouth(currentView);
+				applyForwardAcceleration();
+				break;
 			case WEST:
-				return checkWest(currentView);
+				turnLeft();
+				break;
 			default:
-				return false;
-			}
+				applyBrake();
+				break;
 		}
-		
-		/**
-		 * Check if the wall is on your left hand side given your orientation
-		 * @param orientation
-		 * @param currentView
-		 * @return
-		 */
-		private boolean checkFollowingWall(WorldSpatial.Direction orientation, HashMap<Coordinate, MapTile> currentView) {
-			
-			switch(orientation){
+	}
+
+	private void goNorth() {
+		Direction currentOrientation = getOrientation();
+		switch(currentOrientation){
 			case EAST:
-				return checkNorth(currentView);
+				turnLeft();
+				break;
 			case NORTH:
-				return checkWest(currentView);
+				applyForwardAcceleration();
+				break;
 			case SOUTH:
-				return checkEast(currentView);
+				applyReverseAcceleration();
+				break;
 			case WEST:
-				return checkSouth(currentView);
+				turnRight();
+				break;
 			default:
-				return false;
-			}	
+				applyBrake();
+				break;
 		}
-		
-		/**
-		 * Method below just iterates through the list and check in the correct coordinates.
-		 * i.e. Given your current position is 10,10
-		 * checkEast will check up to wallSensitivity amount of tiles to the right.
-		 * checkWest will check up to wallSensitivity amount of tiles to the left.
-		 * checkNorth will check up to wallSensitivity amount of tiles to the top.
-		 * checkSouth will check up to wallSensitivity amount of tiles below.
-		 */
-		public boolean checkEast(HashMap<Coordinate, MapTile> currentView){
-			// Check tiles to my right
-			Coordinate currentPosition = new Coordinate(getPosition());
-			for(int i = 0; i <= wallSensitivity; i++){
-				MapTile tile = currentView.get(new Coordinate(currentPosition.x+i, currentPosition.y));
-				if(tile.isType(MapTile.Type.WALL)){
-					return true;
+
+	}
+
+	private void goEast() {
+		Direction currentOrientation = getOrientation();
+		switch(currentOrientation){
+			case EAST:
+				applyForwardAcceleration();
+				break;
+			case NORTH:
+				turnRight();
+				break;
+			case SOUTH:
+				turnLeft();
+				break;
+			case WEST:
+				applyReverseAcceleration();
+				break;
+			default:
+				applyBrake();
+				break;
+		}
+
+	}
+
+	private void goWest() {
+		Direction currentOrientation = getOrientation();
+		switch(currentOrientation){
+			case EAST:
+				applyReverseAcceleration();
+				break;
+			case NORTH:
+				turnLeft();
+				break;
+			case SOUTH:
+				turnRight();
+				break;
+			case WEST:
+				applyForwardAcceleration();
+				break;
+			default:
+				applyBrake();
+				break;
+		}
+
+	}
+
+
+
+	//find new key in currentView(if any) and record its coordinate
+	private void findParcels(HashMap<Coordinate, MapTile> currentView) {
+		Iterator iter = currentView.entrySet().iterator();
+		while(iter.hasNext()) {
+			Map.Entry entry = (Map.Entry) iter.next();
+			Coordinate coordinate = (Coordinate) entry.getKey();
+			MapTile mapTile = (MapTile) entry.getValue();
+			if (mapTile instanceof TrapTile) {
+				TrapTile Parcel = (TrapTile) mapTile;
+				String trap = Parcel.getTrap();
+				if((trap != null) && (trap.contains("parcel"))){
+					ParcelLocation.add(coordinate);
 				}
 			}
-			return false;
 		}
-		
-		public boolean checkWest(HashMap<Coordinate,MapTile> currentView){
-			// Check tiles to my left
-			Coordinate currentPosition = new Coordinate(getPosition());
-			for(int i = 0; i <= wallSensitivity; i++){
-				MapTile tile = currentView.get(new Coordinate(currentPosition.x-i, currentPosition.y));
-				if(tile.isType(MapTile.Type.WALL)){
-					return true;
-				}
-			}
-			return false;
-		}
-		
-		public boolean checkNorth(HashMap<Coordinate,MapTile> currentView){
-			// Check tiles to towards the top
-			Coordinate currentPosition = new Coordinate(getPosition());
-			for(int i = 0; i <= wallSensitivity; i++){
-				MapTile tile = currentView.get(new Coordinate(currentPosition.x, currentPosition.y+i));
-				if(tile.isType(MapTile.Type.WALL)){
-					return true;
-				}
-			}
-			return false;
-		}
-		
-		public boolean checkSouth(HashMap<Coordinate,MapTile> currentView){
-			// Check tiles towards the bottom
-			Coordinate currentPosition = new Coordinate(getPosition());
-			for(int i = 0; i <= wallSensitivity; i++){
-				MapTile tile = currentView.get(new Coordinate(currentPosition.x, currentPosition.y-i));
-				if(tile.isType(MapTile.Type.WALL)){
-					return true;
-				}
-			}
-			return false;
-		}
+	}
 		
 	}

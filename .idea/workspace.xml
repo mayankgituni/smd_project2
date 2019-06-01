@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e23c43a-c6b8-4ac7-97c6-257a1f5817aa" name="Default Changelist" comment="- A star algorithm rewrite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/log/output.log" afterPath="$PROJECT_DIR$/assets/log/output.log" />
       <change beforePath="$PROJECT_DIR$/bin/log/output.log" afterPath="$PROJECT_DIR$/bin/log/output.log" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -108,6 +107,12 @@
               <caret line="224" column="50" lean-forward="true" selection-start-line="224" selection-start-column="50" selection-end-line="224" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1293#1305#0" expanded="true" />
+                <element signature="e#1456#1468#0" expanded="true" />
+                <element signature="e#3320#3326#0" expanded="true" />
+                <element signature="e#5015#5026#0" expanded="true" />
+                <element signature="e#7236#7248#0" expanded="true" />
+                <element signature="e#7835#7847#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -465,7 +470,7 @@
       <workItem from="1559279083624" duration="576000" />
       <workItem from="1559299915138" duration="2218000" />
       <workItem from="1559307833458" duration="23912000" />
-      <workItem from="1559398711466" duration="26000" />
+      <workItem from="1559398711466" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist&#10;&#10;Test">
       <created>1559306171896</created>
@@ -523,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559398513213</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- A star algorithm rewrite">
+      <created>1559398772260</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1559398772260</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -541,7 +553,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50452000" />
+    <option name="totallyTimeSpent" value="50498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1003,6 +1015,12 @@
           <caret line="224" column="50" lean-forward="true" selection-start-line="224" selection-start-column="50" selection-end-line="224" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1293#1305#0" expanded="true" />
+            <element signature="e#1456#1468#0" expanded="true" />
+            <element signature="e#3320#3326#0" expanded="true" />
+            <element signature="e#5015#5026#0" expanded="true" />
+            <element signature="e#7236#7248#0" expanded="true" />
+            <element signature="e#7835#7847#0" expanded="true" />
           </folding>
         </state>
       </provider>

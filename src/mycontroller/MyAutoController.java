@@ -1,7 +1,6 @@
 package mycontroller;
 
 import controller.CarController;
-import tiles.LavaTrap;
 import tiles.TrapTile;
 import world.Car;
 import java.util.HashMap;
@@ -11,7 +10,6 @@ import java.util.*;
 
 import tiles.MapTile;
 import utilities.Coordinate;
-import world.WorldSpatial;
 import world.WorldSpatial.Direction;
 
 public class MyAutoController extends CarController{		
@@ -46,9 +44,9 @@ public class MyAutoController extends CarController{
 			findParcels(getView());
 			ExploreMap.getInstance().updateMap(getView());
 
-			RoutingStrategy routingStrategy = new RoutingStrategy(new Coordinate(getPosition()), getOrientation());
+			AstarAlgo astarAlgo = new AstarAlgo(new Coordinate(getPosition()), getOrientation());
 			//find the path using the chosen Strategy
-			ArrayList<Coordinate> path = routingStrategy.AstarPathFinding();
+			ArrayList<Coordinate> path = astarAlgo.AstarPathFinding();
 
 
 			//drive 1 step
